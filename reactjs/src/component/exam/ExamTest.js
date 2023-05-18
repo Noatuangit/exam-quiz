@@ -84,9 +84,13 @@ export default function ExamTest() {
                             name={item.id}
                             handleCheckBox={(data) => handleCheckBox(data)}
                             key={`question-${item.id}`} />)}
-                    <button>submit</button>
+                    <div style={{ display: "flex", justifyContent: "flex-end", marginTop: "5px" }}>
+
+                        <button class="btn btn-success" type="submit">Kết thúc thi</button>
+
+                    </div>
                 </form>
-            </div>
-        </div>
+            </div >
+        </div >
     )
 }
