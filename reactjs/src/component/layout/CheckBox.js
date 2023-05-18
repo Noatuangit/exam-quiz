@@ -19,19 +19,21 @@ export default function CheckBox(props) {
     }, [displayState, state]);
 
     return (
-        <tr>
+        <React.Fragment>
             {
                 displayState.map((item, index) =>
-                    <td key={item + index} style={{ listStyle: "none" }}>
-                        <input
-                            checked={state.includes(item)}
-                            name={props.id} type="checkbox" value={item}
-                            onChange={(event) => handleChange(event)}
-                        /> {displayState[index].substring(1)}
+                    <tr key={item + index}>
+                        <td>
+                            <input
+                                checked={state.includes(item)}
+                                name={props.id} type="checkbox" value={item}
+                                onChange={(event) => handleChange(event)}
+                            /> {displayState[index].substring(1)}
 
-                    </td>)
+                        </td>
+                    </tr>)
             }
-        </tr>
+        </React.Fragment>
     )
 }
 

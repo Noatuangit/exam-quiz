@@ -24,28 +24,24 @@ export default function CardQuestion(props) {
                 <legend className="float-none w-auto p-2">Câu hỏi {props.index}:</legend>
                 <div className="container-question">
                     <div className=" wrap-item-left">{props.item.title} </div>
-                    <div className="war-item-right">
+
+                    <div className="warp-item-right">
+                        <table>
+                            <tbody>
+                                {type === "more true answer" && <CheckBox
+                                    state={state}
+                                    id={props.item.id}
+                                    handleState={(e) => handleState(e)}
+                                />}
+                                {type === "one true answer" && <Radio
+                                    id={props.item.id}
+                                    list={state}
+                                    handleState={(e) => handleState(e)}
+                                />}
+                            </tbody>
+
+                        </table>
                     </div>
-                </div>
-                <ul className="list-group list-group-flush">
-
-                </ul>
-                <div className="war-item-right">
-                    <table>
-                        <tbody>
-                            {type === "more true answer" && <CheckBox
-                                state={state}
-                                id={props.item.id}
-                                handleState={(e) => handleState(e)}
-                            />}
-                            {type === "one true answer" && <Radio
-                                id={props.item.id}
-                                list={state}
-                                handleState={(e) => handleState(e)}
-                            />}
-                        </tbody>
-
-                    </table>
                 </div>
             </fieldset>
         </div>

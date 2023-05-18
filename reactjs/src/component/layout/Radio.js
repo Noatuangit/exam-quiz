@@ -9,10 +9,10 @@ export default function Radio(props) {
     }
 
     return (
-        <tr  >
+        <React.Fragment>
             {props.list.map(item =>
-                <React.Fragment key={item}>
-                    <td style={{ listStyle: "none" }} >
+                <tr key={item}>
+                    <td>
                         <input type="radio"
                             checked={selected === item}
                             onChange={(e) => handleState(e)}
@@ -21,8 +21,8 @@ export default function Radio(props) {
                         />
                     </td>
                     <label>{item.substring(1)}</label>
-                </React.Fragment>
+                </tr>
             )}
-        </tr>
+        </React.Fragment>
     );
 }
