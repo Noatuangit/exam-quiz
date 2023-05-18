@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    border-radius: 10px;
+  }
+  .bg-img {
+    /* background: url("https://haycafe.vn/wp-content/uploads/2022/01/Background-xanh-nhe-nhang-tinh-te-cho-PowerPoint.jpg"); */
+    /* background-image: linear-gradient(to right, rgb(235, 198, 198) , rgb(237, 237, 140)); */
+    
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+  }
+  .bg-img:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /*background: rgba(236, 189, 189, 0.7);*/
+  }
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    z-index: 999;
+    text-align: center;
+    padding: 50px 50px 40px 52px;
+    width: 1000px;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: -1px 4px 28px 0px rgba(0, 0, 0, 0.90);
+  }
+  .content header {
+    color: rgb(26, 4, 71);
+    font-size: 33px;
+    font-weight: 600;
+    margin: 0 0 35px 0;
+  }
+  .field {
+    position: relative;
+    height: 45px;
+    /* width: 100%; */
+    display: flex;
+    background: rgba(255, 255, 255, 0.94);
+  }
+ 
+  .field input, button {
+    height: 100%;
+    /* width: 100%; */
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #222;
+    font-size: 16px;
+  }
+  .space {
+    margin-top: 16px;
+  }
+  .form-select {
+    
+    border-radius: 10px;
+    height: 45px;
+   
+}
+  
+  
+  
+  

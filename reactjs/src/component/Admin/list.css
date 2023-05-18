@@ -1,0 +1,181 @@
+#admin{
+    background-image: linear-gradient(to right, #d0eaf5, #fbf7f1); 
+   height: 100%;
+    
+}
+.action {
+    width: 30%;
+}
+a {                          
+	text-decoration: none !important
+    
+}
+
+a:hover {
+	color: rgb(201, 36, 11);
+
+}
+input{
+    border-radius: 5px;
+}
+h1{
+    text-align: center;
+    color: rgb(2, 2, 69);
+    /* padding-top: 15px; */
+}
+#form{
+    padding: 0 90px 0 80px;
+}
+.input {
+    width: 100%;
+    max-width: 220px;
+    background-color: hwb(0 100% 0%);
+    height: 45px;
+    padding: 12px;
+    margin-left: 4px;
+    border-radius: 12px;
+    border: 1.5px solid rgb(30, 27, 27);
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    box-shadow: 0px 0px 20px -18px;
+  }
+  
+  .input:hover {
+    border: 2px solid rgb(40, 37, 37);
+    box-shadow: 0px 0px 20px -17px;
+  }
+  
+  .input:active {
+    transform: scale(0.95);
+  }
+  
+  .input:focus {
+    border: 2px solid rgb(17, 15, 15);
+  }
+  #button-addon2{
+    border-radius: 12px;
+    border: 1.5px solid rgb(240, 239, 239);
+  }
+  #button-addon2:hover{
+    border-radius: 12px;
+    border: 1.5px solid rgb(40, 37, 37);
+  }
+  #button-addon2:active {
+    transform: scale(0.95);
+  }
+  
+  #button-addon2:focus {
+    border: 2px solid rgb(17, 15, 15);
+  }
+  .custom-btn {
+    width: 200px;
+    height: 40px;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+      7px 7px 20px 0px rgba(0,0,0,.1),
+      4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+   }
+   
+   .btn-1 {
+    background: rgb(126, 238, 106);
+    background: linear-gradient(0deg, rgb(105, 224, 72) 0%, rgb(54, 188, 33) 100%);
+    border: none;
+   }
+   
+   .btn-1:hover {
+    background: rgb(93, 80, 240);
+    background: linear-gradient(0deg, rgb(0, 17, 255) 0%, rgba(2,126,251,1) 100%);
+   }
+   .btn-2 {
+    background: rgb(219, 201, 6);
+    background: linear-gradient(0deg, rgb(194, 194, 6) 0%, rgb(224, 210, 20) 100%);
+    border: none;
+   }
+   
+   .btn-2:hover {
+    background: rgb(247, 227, 7);
+    background: linear-gradient(0deg, rgb(247, 227, 7) 0%, rgb(244, 244, 7) 100%);
+   }
+   .btn-3 {
+    background: rgb(243, 85, 45);
+    background: linear-gradient(0deg, rgb(224, 40, 11) 0%, rgb(234, 72, 47) 100%);
+    border: none;
+   }
+   
+   .btn-3:hover {
+    background: rgb(209, 27, 18);
+    background: linear-gradient(0deg, rgb(176, 17, 17) 0%, rgb(232, 18, 14) 100%);
+   }
+   .custom-btn-1 {
+    width: 80px;
+    height: 40px;
+    margin-left: 8px;
+    color: hsl(0, 43%, 99%);
+    border-radius: 10px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    /* background: transparent; */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+      7px 7px 20px 0px rgba(0,0,0,.1),
+      4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+   }
+   .btn-4 {
+    background: rgb(57, 154, 31);
+    background: linear-gradient(0deg, rgb(74, 140, 16) 0%, rgb(64, 175, 24) 100%);
+    border: none;
+   }
+   
+   .btn-4:hover {
+    background: rgb(19, 78, 10);
+    background: linear-gradient(0deg, rgb(25, 61, 3) 0%, rgb(36, 212, 77) 100%);
+   }
+   .custom-btn-2 {
+    width: 130px;
+    height: 40px;
+    margin-left: 8px;
+    color: hsl(0, 43%, 99%);
+    border-radius: 10px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    /* background: transparent; */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+      7px 7px 20px 0px rgba(0,0,0,.1),
+      4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+   }
+   .btn-5 {
+    background: rgb(68, 69, 68);
+    background: linear-gradient(0deg, rgb(86, 88, 84) 0%, rgb(57, 59, 57) 100%);
+    border: none;
+   }
+   .btn-5:hover {
+    background: rgb(51, 52, 51);
+    background: linear-gradient(0deg, rgb(6, 6, 6) 0%, rgb(91, 93, 91) 100%);
+   }
+   a {
+    color: hwb(0 97% 3%);
+    text-decoration: underline;
+}
+
+  

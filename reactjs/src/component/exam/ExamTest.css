@@ -1,0 +1,33 @@
+ 
+td{
+    padding-left: 50px;
+}
+.container-question {
+    display: flex;
+    flex-direction: row;    
+    min-width: 600px;
+}
+
+.wrap-item-left {
+     width: 75%;
+     margin-left: 10px;
+     margin-right: 10px;
+     padding-left: 34px;
+}
+
+.wrap-item-right {
+    width: 20%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.showButton {
+    width: 40px;
+    margin-left: 5px;
+}
+.hidden-div{
+    background-color: transparent;
+ }
+ .class-result{
+   text-align: center;
+ }
