@@ -11,6 +11,10 @@ import { Component } from 'react';
 import RegisterForm from './component/Login/RegisterForm';
 import FastRegister from './component/Login/FastRegister';
 import Footer from './component/layout/Footer';
+import ForgotPassword from './component/User/ForgotPassword';
+import EditProfile from './component/User/EditProfile';
+import ChangePassword from './component/User/ChangePassword';
+
 
 function App() {
   const JWT = useSelector(state => state);
@@ -36,6 +40,9 @@ function App() {
           <Route path="/createQuestion" element={hasJWT() ? <CreateQuestion /> : <Navigate to={{ pathname: '/login' }} replace />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<FastRegister />} />
+          <Route path='/fogotPassword' element={<ForgotPassword/>} />
+          <Route path='/profile' element={<EditProfile/>} />
+          <Route path='/changePassword' element={<ChangePassword/>} />
         </Routes>
         <Footer />
       </BrowserRouter>
