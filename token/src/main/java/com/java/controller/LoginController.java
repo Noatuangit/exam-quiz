@@ -7,7 +7,6 @@ import com.java.dto.LoginDTO;
 import com.java.dto.RegisterDTO;
 import com.java.dto.ReponseLoginDTO;
 import com.java.jwt.JWTProvider;
-import com.java.model.UserRoles;
 import com.java.model.Users;
 import com.java.service.IUserRolesService;
 import com.java.service.IUsersService;
