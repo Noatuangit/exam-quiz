@@ -13,6 +13,9 @@ import java.io.Serializable;
 public class UserRolesID implements Serializable {
     private static final long serialVersionUID = 1L;
 
+    public UserRolesID( ) {
+    }
+
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "username", referencedColumnName = "username")
     private Users users;
@@ -20,6 +23,11 @@ public class UserRolesID implements Serializable {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "roleid", referencedColumnName = "id")
     private Role role;
+
+    public UserRolesID(Users users) {
+        this.users = new Users(users.getUsername());
+        this.role = new Role(2);
+    }
 
     public Users getUsers() {
         return users;

@@ -18,11 +18,7 @@ function App() {
     return JWT.loginReducer.token != undefined;
   }
 
-  function checkRole() {
-    console.log(JWT.loginReducer);
-    console.log(JWT.loginReducer.roles);
-    return JWT.loginReducer;
-  }
+
 
   return (
     <div className="App">

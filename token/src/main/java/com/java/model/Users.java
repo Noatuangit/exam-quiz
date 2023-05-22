@@ -1,20 +1,16 @@
 package com.java.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+import com.java.dto.RegisterDTO;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
 
 import javax.persistence.*;
-import java.sql.Date;
-import java.time.LocalTime;
 import java.util.Collection;
 import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 @Entity
@@ -51,6 +47,22 @@ public class Users implements UserDetails {
 
     public Users(Integer id) {
         this.id = id;
+    }
+
+    public Users(String username) {
+        this.username = username;
+    }
+
+    public Users(RegisterDTO registerDTO) {
+        BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
+        this.email = registerDTO.getEmail();
+        this.password = bCryptPasswordEncoder.encode(registerDTO.getPassword());
+        this.username = registerDTO.getEmail().split("@")[0];
+        this.nameOfParent = registerDTO.getParentName();
+        this.nameOfStudent = registerDTO.getChildrenName();
+        this.phone = registerDTO.getPhone();
+        this.avatar = "https://robohash.org/laudantiumliberobeatae.png?size=50x50&set=set1";
+        this.status = "on";
     }
 
     public Integer getId() {

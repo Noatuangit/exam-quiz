@@ -2,6 +2,7 @@ import React from 'react'
 import { useLocation } from 'react-router-dom'
 import { ArcElement, Chart as ChartJS, Legend, Tooltip } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
+import './ExamTest.css';
 import DetailsQuestion from './DetailsQuestion';
 export default function Result() {
     const location = useLocation();
@@ -39,31 +40,44 @@ export default function Result() {
     }
 
     return (
-        <div style={{ display: 'flex' }}>
-            <div style={{ padding: '20px', width: '30%' }}>
-                <Pie
-                    data={data}
-                />
-
-                <p>true: {location.state[0].point}</p>
-                <p>false: {location.state[1].length - location.state[0].point}</p>
+        <div className="container">
+            <div style={{
+                textAlign: "center", justifyContent: "center",
+                display: "flex"
+            }}>
+                <h1>Kết quả</h1>
             </div>
-            <div>
-                <table className="table table-striped">
-                    <thead>
+            <div style={{ display: "flex" }}>
+                <div style={{ padding: '20px', width: '30%' }}>
+                    <Pie
+                        data={data}
+                    />
+                    <div className="class-result">
+                        <p>Đúng: {location.state[0].point}/{location.state[1].length}</p>
+                        <p>Sai: {location.state[1].length - location.state[0].point}/{location.state[1].length}</p>
+                    </div>
+                </div>
+                <div>
+                    <fieldset className="border p-2">
+                        <legend className="float-none w-auto p-2">Danh sách đáp án</legend>
+
                         {location.state[1].map((item, index) =>
-                            <tr key={item.id}>
-                                <td>Question {index + 1}</td>
-                                <td><DetailsQuestion
-                                    id={index}
-                                    answer={getAnswerByQuestion(item.id)}
-                                    question={item}
-                                /></td>
-                                <td><button>Report</button></td>
-                            </tr>
+                            <div className="container-question" key={new Date}>
+                                <div className="wrap-item-left hidden-div">
+                                    Câu hỏi {index + 1}
+                                </div>
+                                <div className="war-item-right hidden-div" style={{ display: "flex" }}>
+                                    <DetailsQuestion
+                                        id={index}
+                                        answer={getAnswerByQuestion(item.id)}
+                                        question={item}
+                                    />
+                                    <button className='btn btn-outline-danger showButton'><i class="fa-solid fa-exclamation"></i></button>
+                                </div>
+                            </div>
                         )}
-                    </thead>
-                </table>
+                    </fieldset>
+                </div>
             </div>
         </div>
     )

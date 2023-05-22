@@ -7,3 +7,4 @@ export const urlCourses = "http://localhost:8080/course/listCourse";
 export const urlLogin = "http://localhost:8080/login/springSecurity";
 export const urlLearn = "http://localhost:8080/token/learn";
 export const GlobalDelimiter = "/";
+export const urlRegister = "http://localhost:8080/login/register";
