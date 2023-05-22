@@ -1,6 +1,5 @@
 package com.java.service.impl;
 
-import com.java.model.Role;
 import com.java.model.Users;
 import com.java.repos.IUsersRepos;
 import com.java.service.IUserRolesService;
@@ -13,7 +12,6 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
-import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserDetailsService {

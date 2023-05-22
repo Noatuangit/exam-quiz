@@ -1,6 +1,6 @@
 package com.java.service.impl;
 
-    import com.java.repos.IUserRolesRepos;
+import com.java.repos.IUserRolesRepos;
 import com.java.service.IUserRolesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
@@ -22,5 +22,10 @@ public class UserRolesServiceImpl implements IUserRolesService {
                 .stream()
                 .map(x -> new SimpleGrantedAuthority(x.getUserRolesID().getRole().getName()))
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public void save(String username, String roles){
+          rolesRepos.saveEntity(username,roles);
     }
 }

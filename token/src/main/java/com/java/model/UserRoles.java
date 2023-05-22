@@ -11,6 +11,15 @@ public class UserRoles {
     @EmbeddedId
     UserRolesID userRolesID;
 
+    public UserRoles(){
+
+    }
+
+    public UserRoles(Users users) {
+        this.userRolesID = new UserRolesID(users);
+    }
+
+
     public UserRolesID getUserRolesID() {
         return userRolesID;
     }
